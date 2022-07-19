@@ -15,7 +15,7 @@ arr2.lastIndexOf(3); // 7
 //*arr.find(fn), arr.findIndex(fn)
 //!조건이 true가 되는 첫번째 요소를 반환
 
-//*arr.map
+//*arr.map(fn)
 //조건이 적용된 "새로운 배열" 반환
 let userList = [
   { name: "Mike", age: 30 },
@@ -36,3 +36,35 @@ console.log(newUserList);
 //   { name: 'Jane', age: 25, id: 2, isAdult: true },
 //   { name: 'Tom', age: 19, id: 3, isAdult: false }
 // ]
+
+//*array.sort(fn)
+//원본 배열이 재정렬됨
+//정렬시 요소를 문자열로 취급함
+//제대로 값을 비교하려면 값을 비교할 수 있는 함수를 인수로 전달해야 함
+//lodash를 많이 활용 → _.sortBy(arr)
+
+//*array.reduce(fn) / reduceRight
+let reduceArr = [1, 2, 3, 4];
+
+//?prev : 이전값, cur : 누적값
+const result = reduceArr.reduce((prev, cur) => prev + cur);
+
+//?초기값 지정 가능
+const result2 = reduceArr.reduce((prev, cur) => {
+  return prev + cur;
+}, 100);
+
+//?예제
+const reduceUserList = [
+  { name: "Mike", age: 30 },
+  { name: "Tom", age: 25 },
+  { name: "Jane", age: 27 },
+  { name: "Thor", age: 10 },
+  { name: "Bucky", age: 40 },
+];
+
+const result3 = reduceUserList.reduce((prev, cur) => {
+  if (cur.age > 19) {
+    prev.push(cur.name);
+  }
+}, []);
