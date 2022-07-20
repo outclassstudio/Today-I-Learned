@@ -46,7 +46,7 @@ console.log(newUserList);
 //*array.reduce(fn) / reduceRight
 let reduceArr = [1, 2, 3, 4];
 
-//?prev : 이전값, cur : 누적값
+//?prev :누적된 값, cur : 현재값
 const result = reduceArr.reduce((prev, cur) => prev + cur);
 
 //?초기값 지정 가능
