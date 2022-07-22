@@ -1,0 +1,35 @@
+<script>
+  //아무것도 안 붙이고 변수를 만들거나 var로 만들면 전역 객체로 등록
+  n0 = "n0";
+  var v0 = "v0";
+  //let과 const는 전역으로 저장되지 않음, script scope에 등록됨
+  let l0 = "l0";
+  const c0 = "c0";
+  console.log(v0, n0, l0, c0);
+  console.log(window.v0, window.n0, window.l0, window.c0);
+  function fn2() {
+    n2 = "n2";
+    console.log(n0, n1, n2);
+    var v2 = "v2";
+    console.log(v0, v2);
+    // console.log(v1)
+    let l2 = "l2";
+    console.log(l0, l2);
+    // console.log(l1);
+    const c2 = "c2;";
+    console.log(c0, c2);
+    // console.log(c1);
+  }
+  function fn1() {
+    //아무것도 붙이지 않고 변수를 만들면, 무조건 전역에 들어감
+    n1 = "n1";
+    //함수 실행중에는 로컬로 들어감
+    var v1 = "v1";
+    let l1 = "l1";
+    const c1 = "c1";
+    fn2();
+  }
+  fn1();
+  console.log(n2);
+  // console.log(v2, l2, c2);
+</script>

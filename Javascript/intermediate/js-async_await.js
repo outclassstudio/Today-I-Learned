@@ -44,7 +44,6 @@ const f3 = (msg) => {
 };
 
 //!error처리는 try..catch문을 쓴다
-
 try {
   async function order() {
     const result1 = await f1("1번주문완료");
@@ -56,6 +55,7 @@ try {
   console.log(error);
 }
 
+//?Promise.all도 가능
 async function newOrder() {
   const result = await Promise.all([f1(), f2(), f3()]);
   console.log(result);
