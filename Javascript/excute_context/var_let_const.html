@@ -1,0 +1,52 @@
+<script>
+  //script scope를 먼저 보고 global scope에 접근
+  //global에는 너무 많은 것을 포함하고 있음 : 이미지 built-in된 것을 건드릴 수도 있기 때문에 별도의 script scope생성
+  // console.log(v0, l0); 선언 전에 접근 할 수 없다.
+  var v0 = "v0";
+  let l0 = "l0";
+  console.log(v0, l0);
+
+  // var v0 = 'v00';
+  // let l0 = 'l00';
+
+  function fn1() {
+    v0 = "fn1-v0";
+    l0 = "fn1-l0";
+    console.log(v0, l0);
+  }
+  fn1();
+  console.log(v0, l0);
+
+  function fn2() {
+    var v0 = "fn2-v0";
+    let l0 = "fn2-l0";
+    console.log(v0, l0);
+  }
+  fn2();
+  console.log(v0, l0);
+
+  //block scope
+  {
+    var v0 = "block-v0";
+    let l0 = "block-l0";
+    console.log(v0, l0);
+  }
+  console.log(v0, l0);
+
+  //var의 경우 global의 i에 for 문의 i가 덮어씌워진다
+  var i = "I";
+  for (var i = 0; i < 1; i++) {
+    console.log(i);
+  }
+  console.log(i);
+
+  let j = "J";
+  for (let j = 0; j < 1; j++) {
+    console.log(j);
+  }
+  console.log(j);
+
+  let a = 1;
+  a = 2;
+  // let a = 3 선언 후 재선언 불가
+</script>
