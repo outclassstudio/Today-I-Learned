@@ -1,6 +1,6 @@
 ## This is my TIL notes
 ### 1. Javascript
-- Intermediate
+- intermediate
 - excute_context
 ### 2. Python
-- Glossary
+- glossary
