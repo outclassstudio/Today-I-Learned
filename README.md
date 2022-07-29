@@ -12,3 +12,5 @@
     - product
     - chain
     - combinations , permutations
+  - collections
+    - Counter
