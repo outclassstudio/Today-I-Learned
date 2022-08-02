@@ -14,3 +14,8 @@
     - combinations , permutations
   - collections
     - Counter
+  - list comprehension
+  - binary search
+  - swap
+  - print class instance value
+  
