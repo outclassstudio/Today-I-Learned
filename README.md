@@ -22,3 +22,4 @@
   - binary search
   - swap
   - print class instance value
+  - inf
