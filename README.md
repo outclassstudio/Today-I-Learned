@@ -23,3 +23,5 @@
   - swap
   - print class instance value
   - inf
+
+### 3. Regex
