@@ -34,7 +34,7 @@ function* fn2() {
   return num1 + num2;
 }
 
-const b = fn();
+const b = fn2();
 b.next(1);
 b.next(2);
 
