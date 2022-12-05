@@ -27,3 +27,8 @@ const promises = Promise.all([p1, p2, p3])
 promises
   .then((res) => console.log(res))
   .catch((error) => console.log(error))
+
+  //* Promise.any
+  //? 하나라도 끝나면 다음으로 진행
+  Promise.any([p1, p2, p3])
+    .then(console.og)
